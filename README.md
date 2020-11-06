@@ -2,8 +2,8 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="nodetype.png" alt="Logo" width="250" height="100">
     <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" alt="Nx" width="250" height="100">
+    <img src="nodetype.png" alt="Logo" width="150" height="90">
   </a>
 
   <h3 align="center">Nx-Nodejs-Typescript/GraphQL/Express/MongoDB Boilerplate</h3>
@@ -73,7 +73,7 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-# Roadmap
+## Roadmap
 - [x] Typescript class based implementation.
 - [x] Add GraphQL Support.
 - [ ] CRUD Operations.
