@@ -1,1 +1,2 @@
-console.log('Hello World!');
+import BootstrapApp from './app';
+new BootstrapApp();
