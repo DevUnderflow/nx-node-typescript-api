@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" alt="Nx" width="150" height="90">
+    <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" alt="Nx" width="140" height="80">
     <img src="nodetype.png" alt="Logo" width="250" height="100">
   </a>
 
