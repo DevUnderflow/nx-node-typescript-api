@@ -5,8 +5,8 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
+    "build": "nx build --configuration=production ",
     "start:prod": "pm2 start dist/apps/api/main.js  -i max",
-    "build": "nx build --configuration=production",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
