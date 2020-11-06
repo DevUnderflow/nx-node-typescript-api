@@ -2,8 +2,8 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" alt="Nx" width="250" height="100">
-    <img src="nodetype.png" alt="Logo" width="150" height="60">
+    <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" alt="Nx" width="150" height="90">
+    <img src="nodetype.png" alt="Logo" width="250" height="100">
   </a>
 
   <h3 align="center">Nx-Nodejs-Typescript/GraphQL/Express/MongoDB Boilerplate</h3>
