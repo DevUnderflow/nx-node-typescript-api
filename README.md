@@ -1,73 +1,69 @@
-# NxNodeTypescript
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="#">
+    <img src="nodetype.png" alt="Logo" width="250" height="100">
+    <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" alt="Nx" width="250" height="100">
+  </a>
 
-This project was generated using [Nx](https://nx.dev).
+  <h3 align="center">Nx-Nodejs-Typescript/GraphQL/Express/MongoDB Boilerplate</h3>
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+  <p align="center">
+    A 👨🏻‍💻 Nx-Node-Typescript/Express/MongoDB Boilerplate with User Authentication and Authorization with JWT support.This is an updated version of Sam Quinn's bulletproof-nodejs implementation<a href="https://github.com/santiq/bulletproof-nodejs"> Link to Repo </a><br /><br />
+    This project was generated using [Nx](https://nx.dev).
+    <br />
+    <br />
+    <a href="https://github.com/DevUnderflow/nx-node-typescript-api/issues/new?assignees=&labels=&template=bug_report.md&title=">🐞 Bug Report</a> &nbsp;&nbsp;
+    <a href="https://github.com/DevUnderflow/nx-node-typescript-api/issues/new?assignees=&labels=&template=feature_request.md&title=">📢 Feature Request</a>
+    <br />
+  </p>
+<p align="center">
+<a href="https://github.com/DevUnderflow/nx-node-typescript-api/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="LICENSE">
+</a>
+<a href="https://github.com/DevUnderflow/nx-node-typescript-api/issues">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome">
+</a>
+<a href="#">
+    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="Open Source">
+</a>
+</p>
+</p>
+
+## Tech Stack
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-## Adding capabilities to your workspace
+* [Node.js](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/) , [JWT](https://jwt.io/), [Prettier](https://prettier.io/)— core platforms.
+* [MongoDB](https://www.mongodb.com/) — data access and db automation.
+* [Jest](https://jestjs.io/) - unit and snapshot testing.
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-Below are our core plugins:
+## Development
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+We use `node` version `10.15.0`
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+```
+nvm install 10.15.0
+```
 
-## Generate an application
+```
+nvm use 10.15.0
+```
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+The first time, you will need to run
 
-> You can use any of the plugins above to generate applications as well.
+```
+npm install
+```
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+Run `nx serve ` for a dev server. Navigate to http://localhost:4000/. The app will automatically reload if you change any of the source files.
 
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are sharable across libraries and applications. They can be imported from `@nx-node-typescript/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
 
 ## Build
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+Run `npm run build ` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Understand your workspace
 
@@ -77,14 +73,24 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-## ☁ Nx Cloud
+# Roadmap
+- [x] Typescript class based implementation.
+- [x] Add GraphQL Support.
+- [ ] CRUD Operations.
+- [ ] Unit tests.
 
-### Computation Memoization in the Cloud
+<!-- CONTRIBUTING -->
+## Contributing
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+<!-- LICENSE -->
+## License
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+Distributed under the MIT License. See `LICENSE` for more information.
