@@ -7,7 +7,6 @@
   </a>
 
   <h3 align="center">Nx-Nodejs-Typescript/GraphQL/Express/MongoDB Boilerplate</h3>
-
   <p align="center">
     A 👨🏻‍💻 Nx-Node-Typescript/Express/MongoDB Boilerplate with User Authentication and Authorization with JWT support.This is an updated version of Sam Quinn's bulletproof-nodejs implementation<a href="https://github.com/santiq/bulletproof-nodejs"> Link to Repo </a><br /><br />
     This project was generated using <a href="https://nx.dev">Nx</a>.
