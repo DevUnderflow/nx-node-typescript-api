@@ -4,12 +4,15 @@ import cors from 'cors';
 import MasterRouter from '../api';
 import { environment } from '../../environments/environment';
 import path from 'path';
+import helmet from 'helmet';
 
 export default ({ app }: { app: express.Application }) => {
 	/**
 	 * Health Check endpoints
 	 * @TODO Explain why they are here
 	 */
+
+  app.use(helmet());
 	app.get('/status', (_req, res) => {
 		res.status(200).end();
 	});
