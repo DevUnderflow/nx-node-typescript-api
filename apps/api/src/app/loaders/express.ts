@@ -1,10 +1,13 @@
-import express from 'express';
+import uuidAPIKey  from 'uuid-apikey';
+import express, { Request, Response, NextFunction } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import MasterRouter from '../api';
 import { environment } from '../../environments/environment';
 import path from 'path';
 import helmet from 'helmet';
+import { Container } from 'typedi';
+import mongoose from 'mongoose';
 
 export default ({ app }: { app: express.Application }) => {
 	/**
@@ -18,7 +21,7 @@ export default ({ app }: { app: express.Application }) => {
 	});
 	app.head('/status', (_req, res) => {
 		res.status(200).end();
-	});
+  });
 
 	// app.use((req, res, next) => {
 	//   res.header('Access-Control-Allow-Origin', 'https://app.eklavya.tech');
@@ -43,7 +46,52 @@ export default ({ app }: { app: express.Application }) => {
   app.use(require('method-override')());
   app.use('/static', express.static(path.join(__dirname ,'public')));
 	// Middleware that transforms the raw string of req.body into json
-	app.use(bodyParser.json());
+  app.use(bodyParser.json());
+
+  /**
+   *  @POST Generate API Keys
+   *  @params { email }
+   */
+  app.post(`${environment.api.prefix_v1}/generateApiKey`, async (req: Request, res: Response) => {
+    try {
+      const { apiKey, uuid } = uuidAPIKey.create();
+      const apiKeyModel = Container.get('ApiKeys') as mongoose.Model<mongoose.Document>;
+      const newAPIKey = await apiKeyModel.create({
+        email: req.body.email,
+        apiKey,
+        uuid,
+      })
+      newAPIKey ? res.status(200).json({ apiKey }) : res.status(400).json({ message: 'Error generating API Key' });
+    } catch (e) {
+      console.error(e)
+      return res.status(500).json({ message: "Error generating API Key!"});
+    }
+  });
+
+   /**
+   *  @Middleware  Check If API Key Valid
+   *  @headers  { 'x-api-key' : <VALUE> }
+   */
+  app.use( async (req, _res, _next) => {
+    const apiKeyModel = Container.get('ApiKeys') as mongoose.Model<{email: string, apiKey: string, uuid: string} & mongoose.Document>;
+    const xAPIKey = req.headers['x-api-key'] as string;
+    if (!xAPIKey) {
+      _res.status(401);
+      _res.json({
+          message: 'Please set x-api-key header!!',
+      });
+    }
+
+    const apiKeyResponse = await apiKeyModel.findOne({ apiKey: xAPIKey });
+    if (!apiKeyResponse) {
+      _res.status(401);
+      _res.json({
+        message: 'API key not valid!',
+      });
+    }
+    uuidAPIKey.check(xAPIKey, apiKeyResponse.uuid) ? (_next() ) : ( _res.status(401).json({ message: 'API key not valid!'}) )
+  })
+
 	// Load API routes
   app.use(environment.api.prefix_v1, new MasterRouter().router);
 
@@ -53,8 +101,6 @@ export default ({ app }: { app: express.Application }) => {
 		err['status'] = 404;
 		next(err);
   });
-
-
 
 	/// error handlers
 
