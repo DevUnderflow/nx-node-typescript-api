@@ -57,8 +57,28 @@ The first time, you will need to run
 npm install
 ```
 
-Run `nx serve ` for a dev server. Navigate to http://localhost:4000/. The app will automatically reload if you change any of the source files.
+Run `nx serve` for a dev server. Navigate to http://localhost:4000/. The app will automatically reload if you change any of the source files.
 
+### On Initial serve make a POST request to generate API Key 
+```
+/api/v1/generateApiKey
+
+REQUEST BODY 
+{
+  email: <EMAIL_ID>
+}
+
+RESPONSE BODY 
+{
+    "apiKey": <VALUE>
+}
+```
+Add this apiKey to request header for any server request as
+```
+headers {
+  'x-api-key' : <VALUE>
+}
+``` 
 
 ## Build
 
@@ -72,11 +92,6 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-## Roadmap
-- [x] Typescript class based implementation.
-- [x] Add GraphQL Support.
-- [ ] CRUD Operations.
-- [ ] Unit tests.
 
 ## Developer 
 | [![image](https://avatars3.githubusercontent.com/u/41014321?s=128&v=4)](https://smithgajjar.me) |
