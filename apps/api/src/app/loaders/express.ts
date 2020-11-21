@@ -64,7 +64,7 @@ export default ({ app }: { app: express.Application }) => {
       newAPIKey ? res.status(200).json({ apiKey }) : res.status(400).json({ message: 'Error generating API Key' });
     } catch (e) {
       console.error(e)
-      return res.status(500).json({ message: "Error generating API Key!"});
+      return res.status(500).json({ message: e.message});
     }
   });
 
