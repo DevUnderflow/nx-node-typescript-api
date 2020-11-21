@@ -24,10 +24,16 @@ export default async ({ expressApp }) => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     model: require('../models/user').default,
   };
+  const apiKeys = {
+    name: 'ApiKeys',
+    // Notice the require syntax and the '.default'
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    model: require('../models/apikeys').default,
+  };
   // It returns the agenda instance because it's needed in the subsequent loaders
   const { agenda } = await dependencyInjectorLoader({
     mongoConnection,
-    models: [userModel],
+    models: [userModel, apiKeys],
   });
   Logger.info('✌️ Dependency Injector loaded');
 
