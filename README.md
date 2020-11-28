@@ -36,6 +36,7 @@
 * [Node.js](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/) , [JWT](https://jwt.io/), [Prettier](https://prettier.io/)— core platforms.
 * [MongoDB](https://www.mongodb.com/) — data access and db automation.
 * [Jest](https://jestjs.io/) - unit and snapshot testing.
+* [Newrelic.com](https://newrelic.com/) - server monitoring.
 
 
 
@@ -92,6 +93,10 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
+## Monitor
+[Newrelic.com](https://newrelic.com/) used for server monitoring
+<br>
+To add your own monitor dashboard register at [newrelic.com](https://newrelic.com/), setup new application and follow steps. Then replace newrelic.js.template file with the file provided by the at the time of setup. 
 
 ## Developer 
 | [![image](https://avatars3.githubusercontent.com/u/41014321?s=128&v=4)](https://smithgajjar.me) |
