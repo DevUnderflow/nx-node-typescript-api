@@ -99,9 +99,9 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 To add your own monitor dashboard register at [newrelic.com](https://newrelic.com/), setup new application and follow steps. Then replace newrelic.js.template file with the file provided by the at the time of setup. 
 
 ## Developer 
-| [![image](https://avatars3.githubusercontent.com/u/41014321?s=128&v=4)](https://smithgajjar.me) |
+| [![image](https://avatars3.githubusercontent.com/u/41014321?s=128&v=4)](https://smithgajjar.tech) |
 |:-:|
-| [![LinkedIn](https://icons.iconarchive.com/icons/danleech/simple/32/linkedin-icon.png)](https://www.linkedin.com/in/smith-gajjar-5a27716b/) [![Portfolio](https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/32/Browser-icon.png)](https://smithgajjar.me) |
+| [![LinkedIn](https://icons.iconarchive.com/icons/danleech/simple/32/linkedin-icon.png)](https://www.linkedin.com/in/smith-gajjar-5a27716b/) [![Portfolio](https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/32/Browser-icon.png)](https://smithgajjar.tech) |
 
 <!-- CONTRIBUTING -->
 ## Contributing
